@@ -1,0 +1,23 @@
+{
+  "name": "redux-set-state",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiogondim/redux-set-state.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiogondim/redux-set-state/issues"
+  },
+  "homepage": "https://github.com/caiogondim/redux-set-state#readme",
+  "devDependencies": {
+    "redux": "3.7.2"
+  }
+}
