@@ -9,8 +9,6 @@ test('literal value', () => {
     switch (action.type) {
       case 'SUM':
         return state + action.payload
-      case 'SUB':
-        return state + action.payload
       default:
         return state
     }
@@ -43,7 +41,7 @@ test('array value', () => {
 })
 
 test('object value', () => {
-  function reducer (state = [], action = {}) {
+  function animalsReducer (state = [], action = {}) {
     switch (action.type) {
       case 'ADD_ANIMAL':
         return [ ...state, action.payload ]
@@ -51,13 +49,36 @@ test('object value', () => {
         return state
     }
   }
-  const store = createStoreWithSetState(reducer)
+
+  function carsReducer (state = [], action = {}) {
+    switch (action.type) {
+      case 'ADD_CAR':
+        return [ ...state, action.payload ]
+      default:
+        return state
+    }
+  }
+
+  const store = createStoreWithSetState(
+    redux.combineReducers({
+      animals: animalsReducer,
+      cars: carsReducer
+    })
+  )
 
   store.dispatch({ type: 'ADD_ANIMAL', payload: 'cow' })
-  store.setState([ ...store.getState(), 'sheep' ])
-  store.dispatch({ type: 'ADD_ANIMAL', payload: 'dog' })
+  store.dispatch({ type: 'ADD_CAR', payload: 'db9' })
+  store.setState({
+    animals: [ ...store.getState().animals, 'dog' ]
+  })
+  store.setState({
+    cars: [ ...store.getState().cars, 'f40' ]
+  })
 
-  expect(store.getState()).toEqual(['cow', 'sheep', 'dog'])
+  expect(store.getState()).toEqual({
+    animals: [ 'cow', 'dog' ],
+    cars: [ 'db9', 'f40' ]
+  })
 })
 
 test('store without reducers', () => {
@@ -65,5 +86,5 @@ test('store without reducers', () => {
 
   store.setState([ 'sheep' ])
 
-  expect(store.getState()).toEqual(['sheep'])
+  expect(store.getState()).toEqual([ 'sheep' ])
 })
