@@ -4,7 +4,7 @@ const reduxSetState = require('../lib')
 function animalsReducer(state = [], action = {}) {
   switch (action.type) {
     case 'ADD_ANIMAL':
-      return [ ...state, action.payload.animal ]
+      return [ ...state, action.payload ]
     default:
       return state
   }
@@ -13,7 +13,7 @@ function animalsReducer(state = [], action = {}) {
 function carsReducer(state = [], action = {}) {
   switch (action.type) {
     case 'ADD_CAR':
-      return [  ...state, action.payload.car ]
+      return [ ...state, action.payload ]
     default:
       return state
   }
@@ -21,7 +21,7 @@ function carsReducer(state = [], action = {}) {
 
 const createStoreWithSetState = reduxSetState.decorateCreateStore(redux.createStore)
 
-let store = createStoreWithSetState(
+const store = createStoreWithSetState(
   redux.combineReducers({
     animals: animalsReducer,
     cars: carsReducer
@@ -34,16 +34,12 @@ store.subscribe(() => {
 
 store.dispatch({
   type: 'ADD_ANIMAL',
-  payload: {
-    animal: 'sheep'
-  }
+  payload: 'sheep'
 })
 
 store.dispatch({
   type: 'ADD_CAR',
-  payload: {
-    car: 'f40'
-  }
+  payload: 'f40'
 })
 
 store.setState({ animals: ['dog', 'cow'] })
