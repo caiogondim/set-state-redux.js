@@ -1,9 +1,11 @@
+/* eslint-env jest */
+
 const redux = require('redux')
 const reduxSetState = require('../lib')
 const createStoreWithSetState = reduxSetState.decorateCreateStore(redux.createStore)
 
 test('literal value', () => {
-  function reducer(state = 0, action = {}) {
+  function reducer (state = 0, action = {}) {
     switch (action.type) {
       case 'SUM':
         return state + action.payload
@@ -23,8 +25,8 @@ test('literal value', () => {
 })
 
 test('array value', () => {
-  function reducer(state = [], action = {}) {
-    switch(action.type) {
+  function reducer (state = [], action = {}) {
+    switch (action.type) {
       case 'ADD_ANIMAL':
         return [ ...state, action.payload ]
       default:
@@ -41,8 +43,8 @@ test('array value', () => {
 })
 
 test('object value', () => {
-  function reducer(state = [], action = {}) {
-    switch(action.type) {
+  function reducer (state = [], action = {}) {
+    switch (action.type) {
       case 'ADD_ANIMAL':
         return [ ...state, action.payload ]
       default:
