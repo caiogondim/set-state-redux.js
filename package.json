@@ -1,8 +1,8 @@
 {
   "name": "redux-set-state",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "setState() for Redux",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest && standard --fix 'lib/*.js' 'test/*.js'"
   },
@@ -10,9 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/caiogondim/redux-set-state.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "redux",
+    "react",
+    "preact",
+    "store",
+    "state",
+    "unistore"
+  ],
+  "author": "Caio Gondim",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/caiogondim/redux-set-state/issues"
   },
