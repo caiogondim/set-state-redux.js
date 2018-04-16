@@ -27,5 +27,8 @@
       "**/test/*.js"
     ],
     "collectCoverage": true
+  },
+  "dependencies": {
+    "type-from": "1.0.1"
   }
 }
