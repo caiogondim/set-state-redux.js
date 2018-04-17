@@ -1,10 +1,10 @@
-<img src="http://rawgit.com/caiogondim/redux-set-state.js/master/logo/logo.svg">
+<img src="http://rawgit.com/caiogondim/set-state-redux.js/master/logo/logo.svg">
 
-# redux-set-state
+# set-state-redux
 
 <div>
-<a href="https://travis-ci.org/caiogondim/redux-set-state.js?branch=master"><img src="http://travis-ci.org/caiogondim/redux-set-state.js.svg?branch=master" alt="Travis CI" /></a>
-<a href="https://www.npmjs.com/package/redux-set-state"><img src="https://img.shields.io/npm/v/redux-set-state.svg" alt="npm" /></a>
+<a href="https://travis-ci.org/caiogondim/set-state-redux.js?branch=master"><img src="http://travis-ci.org/caiogondim/set-state-redux.js.svg?branch=master" alt="Travis CI" /></a>
+<a href="https://www.npmjs.com/package/set-state-redux"><img src="https://img.shields.io/npm/v/set-state-redux.svg" alt="npm" /></a>
 </div>
 
 <br>
@@ -14,14 +14,14 @@ Love and `setState` is all you need.
 ## Installation
 
 ```console
-npm install --save redux-set-state
+npm install --save set-state-redux
 ```
 
 ## Usage
 
 ```js
 const redux = require('redux')
-const reduxSetState = require('../lib')
+const setStateRedux = require('set-state-redux')
 
 // Reducers are optional. You can create a store without one.
 function animalsReducer(state = [], action = {}) {
@@ -34,7 +34,7 @@ function animalsReducer(state = [], action = {}) {
 }
 
 // Decorate `redux.createStore`
-const createStoreWithSetState = reduxSetState.decorateCreateStore(redux.createStore)
+const createStoreWithSetState = setStateRedux.decorateCreateStore(redux.createStore)
 
 // Use `createStoreWithSetState` as `redux.createStore`
 const store = createStoreWithSetState(animalsReducer)
@@ -49,7 +49,7 @@ store.dispatch({
 store.setState({ animals: ['dog', 'cow'] })
 ```
 
-<a href="https://github.com/caiogondim/redux-set-state.js/tree/master/example">Example</a>
+<a href="https://github.com/caiogondim/set-state-redux.js/tree/master/example">Example</a>
 
 ## FAQ
 

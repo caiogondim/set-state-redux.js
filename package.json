@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/caiogondim/redux-set-state.git"
+    "url": "git+https://github.com/caiogondim/set-state-redux.git"
   },
   "keywords": [
     "redux",
@@ -21,9 +21,9 @@
   "author": "Caio Gondim",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/caiogondim/redux-set-state/issues"
+    "url": "https://github.com/caiogondim/set-state-redux/issues"
   },
-  "homepage": "https://github.com/caiogondim/redux-set-state#readme",
+  "homepage": "https://github.com/caiogondim/set-state-redux#readme",
   "devDependencies": {
     "jest": "22.4.3",
     "redux": "3.7.2",

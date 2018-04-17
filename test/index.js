@@ -1,8 +1,8 @@
 /* eslint-env jest */
 
 const redux = require('redux')
-const reduxSetState = require('../lib')
-const createStoreWithSetState = reduxSetState.decorateCreateStore(redux.createStore)
+const setStateRedux = require('../lib')
+const createStoreWithSetState = setStateRedux.decorateCreateStore(redux.createStore)
 
 test('literal value', () => {
   function reducer (state = 0, action = {}) {

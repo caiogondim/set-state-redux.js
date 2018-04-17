@@ -1,5 +1,5 @@
 const redux = require('redux')
-const reduxSetState = require('../lib')
+const setStateRedux = require('../lib')
 
 function animalsReducer(state = [], action = {}) {
   switch (action.type) {
@@ -19,7 +19,7 @@ function carsReducer(state = [], action = {}) {
   }
 }
 
-const createStoreWithSetState = reduxSetState.decorateCreateStore(redux.createStore)
+const createStoreWithSetState = setStateRedux.decorateCreateStore(redux.createStore)
 
 const store = createStoreWithSetState(
   redux.combineReducers({
