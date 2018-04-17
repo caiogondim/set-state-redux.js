@@ -1,5 +1,5 @@
 {
-  "name": "redux-set-state",
+  "name": "set-state-redux",
   "version": "1.0.0",
   "description": "setState() for Redux",
   "main": "lib/index.js",
