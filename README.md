@@ -49,7 +49,7 @@ store.dispatch({
 store.setState({ animals: ['dog', 'cow'] })
 ```
 
-<a href="https://github.com/caiogondim/redux-set-state.js/master/example">Example</a>
+<a href="https://github.com/caiogondim/redux-set-state.js/tree/master/example">Example</a>
 
 ## FAQ
 
@@ -60,7 +60,7 @@ but there is already a lot of code coupled with Redux on my current project.
 Consider this an intermediate solution.
 
 ### This is a piece of shit! I'll not use that!
-What floats your boat, my dude. I'll use this shit because it's simpler and because shit floats as well.
+Whatever floats your boat, my dude. I'll use this shit because it's simpler and because shit floats as well.
 
 ### You will lose time travel and all other nice things Redux give to you if you follow the conventions!
 Actually not. There is a reducer under the hood, so everything is still supported.
