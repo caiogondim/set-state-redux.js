@@ -3,7 +3,7 @@
 # set-state-redux
 
 <div>
-<a href="https://travis-ci.org/caiogondim/redux-set-state.js?branch=master"><img src="http://travis-ci.org/caiogondim/redux-set-state.js.svg?branch=master" alt="Travis CI" /></a>
+<a href="https://travis-ci.org/caiogondim/set-state-redux.js?branch=master"><img src="http://travis-ci.org/caiogondim/set-state-redux.js.svg?branch=master" alt="Travis CI" /></a>
 <a href="https://www.npmjs.com/package/set-state-redux"><img src="https://img.shields.io/npm/v/set-state-redux.svg" alt="npm" /></a>
 </div>
 
